@@ -10,9 +10,9 @@ body{
 	line-height: 1.65em;
 	background: $c-bg;
 }
-
+.ff-primary{ font-family: $ff-primary; }
+.ff-text{ font-family: $ff-text; }
 .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6{
-	font-family: $ff-primary;
 	line-height: 1.15em;
 	color: $c-title;
 }

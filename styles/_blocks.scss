@@ -3,6 +3,7 @@
 	h1{
 		color: $c-secondary;
 		font-size: 1rem;
+		font-family: $ff-primary;
 	}
 	h2,h3{
 		font-size:clamp(2.5rem, 8vw, 5rem);
@@ -15,5 +16,40 @@
 	}
 	p{
 		max-width: $w-xsmall;
+	}
+}
+
+// list of articles
+.article-list{
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns: repeat(3, 1fr);
+
+	article{
+		background: $c-dark;
+		padding: $gap * 3;
+		border-radius: 5px;
+		box-shadow: 0 10px 30px -15px #020c1bb3;
+		cursor: pointer;
+		transition: $transition;
+
+		.meta{
+			text-transform: uppercase;
+			color: $c-primary !important;
+			font-family: $ff-primary;
+			font-size: $fs-small;
+		}
+		.title{
+			font-size: 1.4rem;
+			margin: $gap 0;
+		}
+		p{ margin: 0;	}
+
+		&:hover{
+			.title{
+				color: $c-secondary;
+			}
+			transform: translateY(-$gap);
+		}
 	}
 }

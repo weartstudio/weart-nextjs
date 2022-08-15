@@ -21,11 +21,12 @@ $w-xsmall: 600px;
 $w-small: 900px;
 $gap: 10px;
 
+$transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+
 @import "~sassy-normalize/normalize.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@400;700&display=swap');
 
 @import 'basics';
 @import 'nav';
 @import 'blocks';
-@import 'article-list';
 @import 'post';

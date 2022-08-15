@@ -16,8 +16,8 @@ export default function ArticleList({posts}) {
               <Link href={ 'posts/' + post.slug }>
                 <header>
                   <div className="left">
-                    <div className="meta">{ dateDisplay(post.date) }</div>
-                    <h2 className='title'>{ post.title.rendered }</h2>
+                    <span className="meta">{ dateDisplay(post.date) }</span>
+                    <h1 className='title'>{ post.title.rendered }</h1>
                   </div>
                   <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
                 </header>
