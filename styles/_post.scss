@@ -1,0 +1,26 @@
+.post-container{
+	max-width: 900px;
+	margin: 2rem auto;
+
+	figure{
+		margin: 0;
+	}
+	img{
+		width: auto;
+		height: auto;
+		max-width: 100%;
+	}
+
+	.wp-block-image{
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		max-width: 100%;
+	}
+
+	.wp-block-code{
+		padding: 1rem;
+		background: $c-light;
+		code{ overflow-x: auto; max-width: 100%; }
+	}
+
+}

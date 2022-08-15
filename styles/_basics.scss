@@ -1,0 +1,32 @@
+
+html{
+	font-size: 16px;
+	font-size: 100%;
+}
+
+body{
+	font-family: $ff-text;
+	font-size: 1rem;
+	line-height: 1.65em;
+	background: $c-bg;
+}
+
+.h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6{
+	font-family: $ff-primary;
+	line-height: 1.15em;
+	color: $c-title;
+}
+
+a{
+	text-decoration: none;
+	color: $c-primary;
+}
+
+p{
+	color: $c-text;
+}
+
+.wrapper{
+	max-width: 1600px;
+	padding: 0 150px;
+}

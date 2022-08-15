@@ -1,0 +1,19 @@
+#hero{
+	padding: $gap*4 $gap*3;
+	h1{
+		color: $c-secondary;
+		font-size: 1rem;
+	}
+	h2,h3{
+		font-size:clamp(2.5rem, 8vw, 5rem);
+		line-height: 1;
+		margin: 0;
+		font-family: $ff-text;
+	}
+	h3{
+		color: $c-text;
+	}
+	p{
+		max-width: $w-xsmall;
+	}
+}

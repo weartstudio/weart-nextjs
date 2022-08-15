@@ -1,0 +1,31 @@
+$ff-text: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$ff-primary: "Roboto Mono",monospace;
+
+$fs-small: 12px;
+
+$c-dark: #1e2d47;
+$c-primary: #4668c6;
+$c-text: #525252;
+$c-white: white;
+$c-light: #f2f2f2;
+$c-bg: #f3f9fc;
+
+$c-primary: #ccd6f6;
+$c-secondary: #64ffda;
+$c-title: $c-primary;
+$c-text: #8892b0;
+$c-border: #233554;
+$c-bg: #0a192f;
+
+$w-xsmall: 600px;
+$w-small: 900px;
+$gap: 10px;
+
+@import "~sassy-normalize/normalize.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@400;700&display=swap');
+
+@import 'basics';
+@import 'nav';
+@import 'blocks';
+@import 'article-list';
+@import 'post';
