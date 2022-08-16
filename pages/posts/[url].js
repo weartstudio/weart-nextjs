@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { get,getql } from '../../services/api';
+import { getPosts, getPostBySlug } from '../../services/api';
 
 
 export default function Home({ post }) {
@@ -20,33 +20,15 @@ export default function Home({ post }) {
 
 
 export async function getStaticPaths(){
-  const posts = await getql(`query {
-    posts(where: {status: PUBLISH}) {
-      edges {
-        node {
-          slug
-        }
-      }
-    }
-  }`);
+  const posts = await getPosts();
   return {
-    paths: posts.data.posts.edges.map( slug => `/posts/${slug.node.slug}`) || [],
+    paths: posts?.map( slug => `/posts/${slug.slug}`) || [],
     fallback: true,
   }
 }
 
 export async function getStaticProps({params}){
-  // const post = await get(`posts?slug=${params.url}`)
-
-  const q = await getql(`{
-    postBy(slug: "${params.url}") {
-      id
-      title
-      content
-    }
-  }`);
-  const post = q.data.postBy;
-  // const post = params.url;
+  const post = await getPostBySlug(params.url)
   return { props: { post } }
 }
 

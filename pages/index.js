@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import ArticleList from '../components/ArticleList';
 import Hero from '../components/Hero';
-import { get, getql } from '../services/api';
+import { getPosts } from '../services/api';
 
-export default function Home({ posts, postql }) {
-  console.log(postql)
+export default function Home({ posts }) {
   return (
     <div className='wrapper'>
       <Head>
@@ -13,29 +12,12 @@ export default function Home({ posts, postql }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
-      <ArticleList posts={ postql } />
+      <ArticleList posts={ posts } />
     </div>
   )
 }
 
 export async function getStaticProps(){
-  const posts = await get('posts');
-
-  const q = await getql(`query {
-    posts(where: {status: PUBLISH}) {
-      edges {
-        node {
-          excerpt
-          slug
-          title
-          date
-          id
-        }
-      }
-    }
-  }`);
-
-  const postql = q.data.posts.edges.map(item => item.node);
-
-  return { props: { posts, postql } }
+  const posts = await getPosts();
+  return { props: { posts } }
 }
