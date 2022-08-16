@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { get } from '../../services/api';
 
 
-export default function Home({ post }) {
+export default function Home({ post = null }) {
   return (
     <>
       <Head>
