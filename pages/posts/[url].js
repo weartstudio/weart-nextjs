@@ -21,7 +21,7 @@ export default function Home({ post }) {
 
 export async function getStaticPaths(){
   const posts = await getql(`query {
-    posts {
+    posts(where: {status: PUBLISH}) {
       edges {
         node {
           slug
