@@ -1,7 +1,9 @@
 
 html{
-	font-size: 16px;
+	font-size: 18px;
 	font-size: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased
 }
 
 body{
@@ -13,8 +15,9 @@ body{
 .ff-primary{ font-family: $ff-primary; }
 .ff-text{ font-family: $ff-text; }
 .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6{
+	font-family: $ff-primary;
 	line-height: 1.15em;
-	color: $c-title;
+	color: $c-primary;
 }
 
 a{
@@ -28,5 +31,8 @@ p{
 
 .wrapper{
 	max-width: 1600px;
-	padding: 0 150px;
+	padding: 0 $gap * 15;
+	@media (max-width: $desktop) {
+		padding: $gap;
+	}
 }

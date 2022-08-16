@@ -1,8 +1,16 @@
 nav{
-	padding: 0 $gap * 5;
+	height: $gap * 7;
+	margin-bottom: -1 * $gap * 7;
+	padding: 0 $gap * 4;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background: $c-bg;
 	.logo{
 		text-transform: uppercase;
 		letter-spacing: 1px;
@@ -29,7 +37,8 @@ nav{
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				font-family: $ff-primary;
+				font-family: $ff-text;
+				font-weight: bold;
 				border-bottom: 1px solid transparent;
 				&:hover{
 					border-bottom: 1px solid $c-secondary;

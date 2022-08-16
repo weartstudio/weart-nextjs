@@ -1,21 +1,24 @@
 #hero{
-	padding: $gap*4 $gap*3;
-	h1{
-		color: $c-secondary;
-		font-size: 1rem;
-		font-family: $ff-primary;
-	}
-	h2,h3{
-		font-size:clamp(2.5rem, 8vw, 5rem);
-		line-height: 1;
-		margin: 0;
-		font-family: $ff-text;
-	}
-	h3{
-		color: $c-text;
-	}
-	p{
-		max-width: $w-xsmall;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.inner{
+		max-width: $w-small;
+		h1{
+			color: $c-secondary;
+			font-size: 1rem;
+			font-family: $ff-text;
+		}
+		h2,h3{
+			font-size:clamp(2rem, 8vw, 4rem);
+			line-height: 1;
+			margin: 0;
+			font-family: $ff-primary;
+		}
+		h3{	color: $c-text;	}
+		p{ max-width: $w-xsmall; }
 	}
 }
 
@@ -26,10 +29,10 @@
 	grid-template-columns: repeat(3, 1fr);
 
 	article{
-		background: $c-dark;
+		background: $c-white;
 		padding: $gap * 3;
 		border-radius: 5px;
-		box-shadow: 0 10px 30px -15px #020c1bb3;
+		box-shadow: 0 10px 30px -15px $c-dark;
 		cursor: pointer;
 		transition: $transition;
 

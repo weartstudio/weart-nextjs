@@ -22,7 +22,7 @@ export default function Home({ post }) {
 export async function getStaticPaths(){
   const posts = await getPosts();
   return {
-    paths: posts?.map( slug => `/posts/${slug.slug}`) || [],
+    paths: posts?.map( post => `/posts/${post.slug}`) || [],
     fallback: true,
   }
 }
