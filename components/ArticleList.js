@@ -10,7 +10,7 @@ export default function ArticleList({posts}) {
     <>
       <h2></h2>
       <div className="article-list">
-        { posts.map( post => {
+        { posts?.map( post => {
           return(
             <article key={ post.id }>
               <Link href={ 'posts/' + post.slug }>

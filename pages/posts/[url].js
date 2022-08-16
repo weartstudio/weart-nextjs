@@ -11,8 +11,8 @@ export default function Home({ post }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="post-container">
-        <h1>{ post.title }</h1>
-        <div className='post-content'  dangerouslySetInnerHTML={{ __html: post.content }} />
+        <h1>{ post?.title }</h1>
+        <div className='post-content'  dangerouslySetInnerHTML={{ __html: post?.content }} />
       </div>
     </>
   )
