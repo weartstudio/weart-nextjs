@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import ArticleList from '../components/ArticleList';
 import Hero from '../components/Hero';
-import Menu from '../components/Menu';
 import { get, getql } from '../services/api';
 
 export default function Home({ posts, postql }) {

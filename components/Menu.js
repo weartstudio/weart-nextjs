@@ -3,7 +3,7 @@ import React from 'react'
 function Menu() {
 	return (
 		<nav>
-			<div className="logo">weart</div>
+			<a href="/" className="logo">weart</a>
 			<ol>
 				<li><a href="#rolam">Rólam</a></li>
 				<li><a href="#portfolio">Portfólió</a></li>
