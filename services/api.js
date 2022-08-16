@@ -17,3 +17,19 @@ export async function get(api) {
 		return false;
 	}
 }
+
+export async function getql(api){
+	const apiUrl = process.env.WORDPRESS_API_URL;
+	let response = await fetch(apiUrl, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			query: api,
+			variables: {},
+		}),
+	});
+	let data = await response.json();
+	return data;
+}

@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import { get } from '../../services/api';
+import { get,getql } from '../../services/api';
 
 
-export default function Home({ post = null }) {
+export default function Home({ post }) {
   return (
     <>
       <Head>
@@ -11,8 +11,8 @@ export default function Home({ post = null }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="post-container">
-        <h1>{ post[0].title.rendered }</h1>
-        <div className='post-content'  dangerouslySetInnerHTML={{ __html: post[0].content.rendered }} />
+        <h1>{ post.title }</h1>
+        <div className='post-content'  dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
     </>
   )
@@ -20,15 +20,33 @@ export default function Home({ post = null }) {
 
 
 export async function getStaticPaths(){
-  const posts = await get('posts');
+  const posts = await getql(`query {
+    posts {
+      edges {
+        node {
+          slug
+        }
+      }
+    }
+  }`);
   return {
-    paths: posts.map( post => `/posts/${post.slug}`) || [],
+    paths: posts.data.posts.edges.map( slug => `/posts/${slug.node.slug}`) || [],
     fallback: true,
   }
 }
 
 export async function getStaticProps({params}){
-  const post = await get(`posts?slug=${params.url}`)
+  // const post = await get(`posts?slug=${params.url}`)
+
+  const q = await getql(`{
+    postBy(slug: "${params.url}") {
+      id
+      title
+      content
+    }
+  }`);
+  const post = q.data.postBy;
+  // const post = params.url;
   return { props: { post } }
 }
 
