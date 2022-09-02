@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,700;1,700&display=swap');
+
 $ff-text: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 $ff-primary: "Work Sans", sans-serif;
 
@@ -14,15 +16,30 @@ $c-border: #233554;
 
 $w-xsmall: 600px;
 $w-small: 1024px;
+$w-normal: 1140px;
 $gap: 10px;
 $desktop: 1200px;
 
 $transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 
-@import "~sassy-normalize/normalize.scss";
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,700;1,700&display=swap');
 
-@import 'basics';
-@import 'nav';
-@import 'blocks';
-@import 'post';
+$theme-colors: (
+  "primary":    $c-primary,
+  "secondary":  $c-secondary,
+  "dark":    		$c-dark,
+  "text":       $c-text,
+  "bg":    			$c-bg,
+  "white":     	$c-white,
+  "light":      $c-bg,
+);
+
+//BS
+$headings-font-family: $ff-primary;
+$headings-color: $c-dark;
+
+$card-border-width: 0;
+$box-shadow: 0 .5rem 1rem rgba($c-dark, .075);
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "post"

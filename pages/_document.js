@@ -5,8 +5,8 @@ export default function Document() {
   return (
     <Html>
       <Head />
-      <body>
-				<Menu />
+      <body className='bg-light'>
+        <Menu />
         <Main />
         <NextScript />
       </body>

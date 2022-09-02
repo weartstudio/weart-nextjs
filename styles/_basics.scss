@@ -29,7 +29,7 @@ p{
 	color: $c-text;
 }
 
-.wrapper{
+.wrap{
 	max-width: 1600px;
 	padding: 0 $gap * 15;
 	@media (max-width: $desktop) {

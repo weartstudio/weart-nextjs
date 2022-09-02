@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { Container, Navbar, Nav } from 'react-bootstrap'
 
 function Menu() {
+
 	return (
-		<nav>
-			<Link href="/">
-				<a className='logo'>weart</a>
-			</Link>
-			<ol>
-				<li><Link href="/rolam">Rólam</Link></li>
-				<li><Link href="/portfolio">Portfólió</Link></li>
-				<li><Link href="/blog">Blog</Link></li>
-				<li><Link href="/kapcsolat">Kapcsolat</Link></li>
-			</ol>
-		</nav>
+		<Navbar sticky="top" bg="dark" variant="dark" expand="lg">
+			<Container fluid>
+				<Navbar.Brand href="/">Weart</Navbar.Brand>
+				<Navbar.Toggle aria-controls="main-navbar" />
+				<Navbar.Collapse id="main-navbar">
+					<Nav className="ms-auto">
+						<Nav.Link href="/rolam">Rólam</Nav.Link>
+						<Nav.Link href="/portfolio">Portfólió</Nav.Link>
+						<Nav.Link href="/blog">Blog</Nav.Link>
+						<Nav.Link href="/kapcsolat">Kapcsolat</Nav.Link>
+					</Nav>
+				</Navbar.Collapse>
+			</Container>
+		</Navbar>
 	)
 }
 
