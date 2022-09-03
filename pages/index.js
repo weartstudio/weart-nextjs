@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import Hero from '../components/Hero';
 import { getPosts } from '../services/api';
-import ArticleItem from '../components/ArticleItem'
-import PageTitle from '../components/PageTitle'
-import { Container, Row, Col } from 'react-bootstrap';
+import ArticleList from '../components/ArticleList';
 
 export default function Home({ posts }) {
   return (
@@ -14,18 +12,7 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
-      <Container className='my-5'>
-        <PageTitle title="Blog" />
-        <Row className='g-4'>
-          {posts?.map(post => {
-            return (
-              <Col lg={4}>
-                <ArticleItem post={post} key={post.id} />
-              </Col>
-            )
-          })}
-        </Row>
-      </Container>
+      <ArticleList posts={posts} limit={9} />
     </>
   )
 }
