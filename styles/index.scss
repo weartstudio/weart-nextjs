@@ -33,6 +33,9 @@ $theme-colors: (
 );
 
 //BS
+$link-color: $c-primary;
+$link-decoration: none;
+
 $headings-font-family: $ff-primary;
 $headings-color: $c-dark;
 
@@ -41,4 +44,33 @@ $box-shadow: 0 .5rem 1rem rgba($c-dark, .075);
 
 @import "~bootstrap/scss/bootstrap";
 
-@import "post"
+@import "post";
+
+
+#hero{
+  min-height: 500px;
+  position: relative;
+}
+
+.img-right{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  max-width: 728px;
+  opacity: .3;
+  &:before{
+    content: "";
+    display: block;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, $c-dark 0%, rgba(15, 65, 72, 0) 100%);
+  }
+}
