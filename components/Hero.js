@@ -11,6 +11,11 @@ function Hero() {
 						<h1 className='text-white'>Helló Egyed Balázs vagyok.</h1>
 						<p className='lead'>Több mint 6 éves tapasztalattal rendelkező programozó, front-end fejlesztési specializációval. Jelenleg az <a href="https://opten.hu">Optennél</a> dolgozom.</p>
 					</Col>
+					<Col>
+						<div className="img-right">
+							<Image layout='fill' src={`https://weart.hu/wp-content/uploads/2021/01/rotate.jpg`} />
+						</div>
+					</Col>
 				</Row>
 			</Container>
 		</div>

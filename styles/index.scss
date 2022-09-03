@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,700;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,700;1,400&display=swap');
 
-$ff-text: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-$ff-primary: "Work Sans", sans-serif;
+
+// $ff-text: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+// $ff-primary: "Work Sans", sans-serif;
+$ff-primary: "Bai Jamjuree", sans-serif;
+$ff-text: $ff-primary;
 
 $fs-small: 12px;
 
@@ -36,8 +40,10 @@ $theme-colors: (
 $link-color: $c-primary;
 $link-decoration: none;
 
+$font-family-base: $ff-text;
 $headings-font-family: $ff-primary;
 $headings-color: $c-dark;
+$headings-font-weight: 700;
 
 $card-border-width: 0;
 $box-shadow: 0 .5rem 1rem rgba($c-dark, .075);
@@ -45,32 +51,4 @@ $box-shadow: 0 .5rem 1rem rgba($c-dark, .075);
 @import "~bootstrap/scss/bootstrap";
 
 @import "post";
-
-
-#hero{
-  min-height: 500px;
-  position: relative;
-}
-
-.img-right{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  max-width: 728px;
-  opacity: .3;
-  &:before{
-    content: "";
-    display: block;
-    width: 40%;
-    position: absolute;
-    top: 0;
-    right: auto;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(90deg, $c-dark 0%, rgba(15, 65, 72, 0) 100%);
-  }
-}
+@import "blocks";

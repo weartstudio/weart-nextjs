@@ -8,10 +8,10 @@ function ArticleList({ posts, limit }) {
 		<Container className='my-5'>
 			<PageTitle title="Blog" />
 			<Row className='g-4'>
-				{posts?.slice(0, limit).map(post => {
+				{posts?.slice(0, limit).map((post, index) => {
 					return (
 						<Col lg={4}>
-							<ArticleItem post={post} key={post.id} />
+							<ArticleItem post={post} key={index} />
 						</Col>
 					)
 				}

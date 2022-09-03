@@ -1,0 +1,39 @@
+
+#hero{
+  min-height: 600px;
+  position: relative;
+  .img-right{
+    height: 100%;
+    width: 100%;
+    max-width: 728px;
+    opacity: .3;
+    @include media-breakpoint-up(lg){
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      &:before{
+        content: "";
+        display: block;
+        width: 40%;
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+        background: linear-gradient(90deg, $c-dark 0%, rgba(#000, 0) 100%);
+      }
+    }
+    img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: right center;
+      object-position: right center;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+}
