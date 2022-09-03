@@ -5,7 +5,7 @@ import PageTitle from '../components/PageTitle'
 function Contact() {
 	return (
 		<Container className='my-5'>
-			<PageTitle title="Kapcoslat" />
+			<PageTitle title="Kapcsolat" />
 		</Container>
 	)
 }
