@@ -1,7 +1,9 @@
 import Head from 'next/head'
-import ArticleList from '../components/ArticleList';
 import Hero from '../components/Hero';
 import { getPosts } from '../services/api';
+import ArticleItem from '../components/ArticleItem'
+import PageTitle from '../components/PageTitle'
+import { Container, Row, Col } from 'react-bootstrap';
 
 export default function Home({ posts }) {
   return (
@@ -12,12 +14,23 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
-      <ArticleList posts={ posts } />
+      <Container className='my-5'>
+        <PageTitle title="Blog" />
+        <Row className='g-4'>
+          {posts?.map(post => {
+            return (
+              <Col lg={4}>
+                <ArticleItem post={post} key={post.id} />
+              </Col>
+            )
+          })}
+        </Row>
+      </Container>
     </>
   )
 }
 
-export async function getStaticProps(){
+export async function getStaticProps() {
   const posts = await getPosts();
   return { props: { posts } }
 }

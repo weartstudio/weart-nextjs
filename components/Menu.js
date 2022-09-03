@@ -11,10 +11,10 @@ function Menu() {
 				<Navbar.Toggle aria-controls="main-navbar" />
 				<Navbar.Collapse id="main-navbar">
 					<Nav className="ms-auto">
-						<Nav.Link href="/rolam">Rólam</Nav.Link>
+						<Nav.Link href="/about">Rólam</Nav.Link>
 						<Nav.Link href="/portfolio">Portfólió</Nav.Link>
-						<Nav.Link href="/blog">Blog</Nav.Link>
-						<Nav.Link href="/kapcsolat">Kapcsolat</Nav.Link>
+						<Nav.Link href="/posts">Blog</Nav.Link>
+						<Nav.Link href="/contact">Kapcsolat</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
