@@ -50,7 +50,7 @@ export async function getHomePage() {
   }`;
 
   const response = await get(query);
-  const data = response.data.pageBy.homeHero3;
+  const data = response.data.pageBy.homeHero;
   return data;
 }
 
