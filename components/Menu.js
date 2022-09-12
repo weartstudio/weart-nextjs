@@ -5,7 +5,7 @@ import { Container, Navbar, Nav, Button } from 'react-bootstrap'
 function Menu() {
 
 	return (
-		<Navbar sticky="top" bg="dark" variant="dark" expand="lg">
+		<Navbar bg="dark" variant="dark" expand="lg">
 			<Container className='my-2'>
 				<Navbar.Brand href="/">Weart</Navbar.Brand>
 				<Navbar.Toggle aria-controls="main-navbar" className='ms-auto me-2' />
