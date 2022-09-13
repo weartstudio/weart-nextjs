@@ -4,16 +4,17 @@ import Image from 'next/image'
 
 function Hero({ data }) {
 	return (
-		<div id="hero" className='bg-dark text-white py-5 d-flex align-items-center'>
+		<div id="hero" className='py-5 d-flex align-items-center'>
 			<Container>
-				<Row>
-					<Col lg={6}>
-						<h1 className='text-white'>{data.homeTitle}</h1>
-						<p className='lead'>{data.homeLead}</p>
+				<Row className='align-items-center'>
+					<Col lg={7}>
+						<h1>{data.text.title}</h1>
+						<h2 className="h2">FrontEnd fejlesztő 8+ év tapasztalattal</h2>
+						<p className='lead'>{data.text.lead}</p>
 					</Col>
 					<Col>
-						<div className="img-right">
-							<Image layout='fill' src={`https://weart.hu/wp-content/uploads/2021/01/rotate.jpg`} />
+						<div className="d-block">
+							<Image className="rounded-circle" width={460} height={460} layout="responsive" src={data.image.sourceUrl} />
 						</div>
 					</Col>
 				</Row>

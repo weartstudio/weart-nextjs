@@ -1,7 +1,12 @@
+import { ApolloClient, InMemoryCache } from '@apollo/client';
 import Head from 'next/head'
 import { Container, Row, Col } from 'react-bootstrap';
-import { getPosts, getPostBySlug } from '../../services/api';
+import { GET_POSTS_SLUG, GET_POSTBY_SLUG } from '../../graphql/queries';
 
+const client = new ApolloClient({
+  uri: process.env.GQL_URL,
+  cache: new InMemoryCache()
+})
 
 export default function Home({ post }) {
   return (
@@ -25,15 +30,35 @@ export default function Home({ post }) {
 
 
 export async function getStaticPaths() {
-  const posts = await getPosts();
+
+  const { data } = await client.query({
+    query: GET_POSTS_SLUG
+  })
+
+  const paths = data.posts.edges.map(post => {
+    return {
+      params: {
+        slug: post.node.slug
+      }
+    }
+  });
+
   return {
-    paths: posts?.map(post => `/posts/${post.slug}`) || [],
-    fallback: true,
+    paths,
+    fallback: false,
   }
 }
 
 export async function getStaticProps({ params }) {
-  const post = await getPostBySlug(params.url)
-  return { props: { post } }
-}
 
+  const { data } = await client.query({
+    query: GET_POSTBY_SLUG,
+    variables: { slugUrl: params.slug }
+  });
+
+  return {
+    props: {
+      post: data.postBy
+    }
+  }
+}

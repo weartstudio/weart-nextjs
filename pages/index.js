@@ -1,15 +1,8 @@
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import Head from 'next/head'
 import Hero from '../components/Hero';
-import { getPosts, getHomePage } from '../services/api';
-import ArticleList from '../components/ArticleList';
-import { useEffect } from 'react';
 
-export default function Home({ posts, home }) {
-
-  useEffect(() => {
-    document.querySelector("body .navbar").classList.add("position-top");
-    document.querySelector("body .navbar").classList.remove("bg-dark");
-  }, []);
+export default function Home({ home }) {
 
   return (
     <>
@@ -19,13 +12,36 @@ export default function Home({ posts, home }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero data={home} />
-      <ArticleList posts={posts} limit={9} />
     </>
   )
 }
 
 export async function getStaticProps() {
-  const posts = await getPosts();
-  const home = await getHomePage();
-  return { props: { posts, home } }
+
+  const client = new ApolloClient({
+    uri: process.env.GQL_URL,
+    cache: new InMemoryCache()
+  });
+
+  const { data } = await client.query({
+    query: gql`query {
+      pageBy(pageId: 1500) {
+        homeHero {
+          image {
+            sourceUrl
+          }
+          text {
+            lead
+            title
+          }
+        }
+      }
+    }`
+  })
+
+  return {
+    props: {
+      home: data.pageBy.homeHero
+    }
+  }
 }
