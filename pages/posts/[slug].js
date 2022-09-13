@@ -38,7 +38,7 @@ export async function getStaticPaths() {
   const paths = data.posts.edges.map(post => {
     return {
       params: {
-        slug: post.node.slug
+        slug: post.node.slug || ""
       }
     }
   });
