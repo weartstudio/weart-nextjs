@@ -1,20 +1,22 @@
 import React from 'react'
-import { Col, Row, Container } from 'react-bootstrap'
-import Image from 'next/image'
+import { Col, Row, Container, Button } from 'react-bootstrap'
 
 function Hero({ data }) {
 	return (
-		<div id="hero" className='py-5 d-flex align-items-center'>
+		<div id="hero" className='text-center text-md-start'>
 			<Container>
-				<Row className='align-items-center'>
-					<Col lg={7}>
-						<h1>{data.text.title}</h1>
-						<h2 className="h2">FrontEnd fejlesztő 8+ év tapasztalattal</h2>
-						<p className='lead'>{data.text.lead}</p>
+				<Row>
+					<Col lg={6} className="py-5 text">
+						<h1 className='title'>Sikeres Front-end Fejlesztő</h1>
+						<p className='lead'>Helló, Egyed Balázs vagyok egy szabadúszó front-end fejlesztő több mint 8 éves tapasztalattal. Weboldalaimat főleg React, és MVC alapú WordPress megoldásokkal készítem el.</p>
+						<Row className='justify-content-center justify-content-md-start'>
+							<Col xs="auto"><Button href="/portfolio">Portfolió</Button></Col>
+							<Col xs="auto"><Button href="/about" className='btn-link'>Rólam</Button></Col>
+						</Row>
 					</Col>
 					<Col>
-						<div className="d-block">
-							<Image className="rounded-circle" width={460} height={460} layout="responsive" src={data.image.sourceUrl} />
+						<div className="hero-img">
+							<img src="/about.jpeg" alt="Egyed Balázs" />
 						</div>
 					</Col>
 				</Row>

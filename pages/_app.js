@@ -3,7 +3,7 @@ import Menu from '../components/Menu'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className='bg-light min-vh-100'>
+    <div>
       <Menu />
       <Component {...pageProps} />
     </div>

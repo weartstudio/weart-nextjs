@@ -1,13 +1,20 @@
-
 #hero{
   min-height: 600px;
   position: relative;
-  .img-right{
+  background: $c-dark;
+  display: flex;
+  align-items: center;
+  .text *{
+    color: $c-white;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-img{
     height: 100%;
     width: 100%;
     max-width: 728px;
     opacity: .3;
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(md){
       position: absolute;
       top: 0;
       right: 0;
@@ -35,5 +42,11 @@
       height: 100%;
     }
 
+  }
+}
+
+#logos{
+  img{
+    max-height: 40px;
   }
 }

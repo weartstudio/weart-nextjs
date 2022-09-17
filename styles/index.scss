@@ -48,6 +48,18 @@ $headings-font-weight: 700;
 $card-border-width: 0;
 $box-shadow: 0 .5rem 1rem rgba($c-dark, .075);
 
+$container-max-widths: (
+  xxl: 1320px
+);
+
+$navbar-padding-y: 1rem;
+$navbar-toggler-padding-y:     .25rem;
+$navbar-toggler-padding-x:     .75rem;
+$navbar-toggler-font-size:     1rem;
+// $navbar-toggler-border-radius: $btn-border-radius;
+// $navbar-toggler-focus-width:   $btn-focus-width;
+$navbar-toggler-transition:    box-shadow .15s ease-in-out;
+
 @import "~bootstrap/scss/bootstrap";
 
 @import "post";
