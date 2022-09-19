@@ -47,6 +47,9 @@
 
 #logos{
   img{
-    max-height: 40px;
+    max-height: 35px;
+    &:not(:hover){
+      filter: grayscale(100%);
+    }
   }
 }

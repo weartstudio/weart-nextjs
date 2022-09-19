@@ -1,11 +1,12 @@
-// @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,700;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,700;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,700;1,400&display=swap');
 
 
-// $ff-text: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$ff-text: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 // $ff-primary: "Work Sans", sans-serif;
-$ff-primary: "Bai Jamjuree", sans-serif;
-$ff-text: $ff-primary;
+$ff-primary:  "Work Sans", "Bai Jamjuree", sans-serif;
+// $ff-text: $ff-primary;
+// $ff-text: $ff-primary;
 
 $fs-small: 12px;
 
