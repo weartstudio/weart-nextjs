@@ -1,8 +1,8 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import Head from 'next/head'
-import Hero from '../components/Hero';
-import Logos from '../components/Logos';
-import Services from '../components/Services';
+import Hero from '../components/Home/Hero';
+import Logos from '../components/Home/Logos';
+import Services from '../components/Home/Services';
 import { Container } from 'react-bootstrap';
 
 export default function Home({ hero }) {

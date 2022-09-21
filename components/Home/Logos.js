@@ -10,7 +10,7 @@ function Logos() {
 				<Col xs="6" sm="4" lg="auto"><img src="https://logos-download.com/wp-content/uploads/2016/09/React_logo_wordmark.png" alt="" /></Col>
 				<Col xs="6" sm="4" lg="auto"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png" alt="" /></Col>
 				<Col xs="6" sm="4" lg="auto"><img src="https://logos-download.com/wp-content/uploads/2016/03/WordPress_logo.png" alt="" /></Col>
-				<Col xs="6" sm="4" lg="auto"><img src="/image/vercel.png" style={{ maxHeight: 25 }} /></Col>
+				<Col xs="6" sm="4" lg="auto"><img src="/php.png" /></Col>
 			</Row>
 		</div >
 	)
