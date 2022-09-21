@@ -13,21 +13,21 @@ function Services() {
 			</div>
 			<Row className='g-5 py-5'>
 				<Col lg="4">
-					<Card>
+					<Card className="border-top border-primary border-3 shadow">
 						<Card.Body>
 							JavaScript & React
 						</Card.Body>
 					</Card>
 				</Col>
 				<Col lg="4">
-					<Card>
+					<Card className="border-top border-primary border-3 shadow">
 						<Card.Body>
 							WordPress
 						</Card.Body>
 					</Card>
 				</Col>
 				<Col lg="4">
-					<Card>
+					<Card className="border-top border-primary border-3 shadow">
 						<Card.Body>
 							Design to Code
 						</Card.Body>
