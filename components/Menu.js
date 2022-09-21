@@ -2,9 +2,9 @@ import { Container, Navbar, Nav, Button } from 'react-bootstrap'
 
 function Menu() {
 	return (
-		<Navbar variant='light' expand="lg" className='border-bottom border-2 border-dark'>
+		<Navbar variant='dark' bg='dark' expand='lg'>
 			<Container>
-				<Navbar.Brand href="/"><img src="/logo.png" alt="" /></Navbar.Brand>
+				<Navbar.Brand href="/">weart</Navbar.Brand>
 				<Navbar.Toggle aria-controls="main-navbar" className='ms-auto' />
 				<Navbar.Collapse id="main-navbar">
 					<Nav className="ms-auto">
