@@ -44,10 +44,11 @@ $font-family-base: $ff-text;
 $headings-font-family: $ff-primary;
 $headings-font-weight: 700;
 
-$h1-font-size: 4.25rem;
-$h2-font-size: 4rem;
-$h3-font-size: 3rem;
-$h4-font-size: 2rem;
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 4.25;
+$h2-font-size: $font-size-base * 4;
+$h3-font-size: $font-size-base * 3;
+$h4-font-size: $font-size-base * 2;
 
 $card-border-width: 0;
 $card-border-radius: 0;
