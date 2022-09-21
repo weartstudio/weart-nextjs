@@ -3,7 +3,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap'
 
 function Services() {
 	return (
-		<>
+		<div className='py-5'>
 			<div className="text-center text-white">
 				<h2 className="h2 text-white">Look at my services</h2>
 				<div className='lead mx-auto' style={{ maxWidth: 500 }}>
@@ -14,26 +14,28 @@ function Services() {
 				<Col lg="4">
 					<Card className="border-top border-primary border-3 shadow">
 						<Card.Body>
-							JavaScript & React
+							<Card.Title>JavaScript & React</Card.Title>
+
 						</Card.Body>
 					</Card>
 				</Col>
 				<Col lg="4">
 					<Card className="border-top border-primary border-3 shadow">
 						<Card.Body>
-							WordPress
+							<Card.Title>WordPress</Card.Title>
+
 						</Card.Body>
 					</Card>
 				</Col>
 				<Col lg="4">
 					<Card className="border-top border-primary border-3 shadow">
 						<Card.Body>
-							Design to Code
+							<Card.Title>Design to Code</Card.Title>
 						</Card.Body>
 					</Card>
 				</Col>
 			</Row>
-		</>
+		</div>
 	)
 }
 

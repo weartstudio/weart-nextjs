@@ -1,15 +1,8 @@
 #hero{
   position: relative;
-
-  .text *{
-    color: $c-white;
-    position: relative;
-    z-index: 2;
-  }
   .hero-img{
     box-shadow: 0 0 100px $c-primary;
     display: inline-block;
-    padding: $spacer;
     img{
       opacity: .65;
     }
