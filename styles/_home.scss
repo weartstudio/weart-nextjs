@@ -1,0 +1,43 @@
+
+.hero-img{
+  position: relative;
+  display: inline-block;
+  opacity: .6;
+  .img-fluid{
+    position: relative;
+    z-index: 1;
+  }
+  .img-bg{
+    @keyframes scalecenter {
+      0% { box-shadow: 0 0 3rem $primary; }
+      50% { box-shadow: 0 0 5rem $primary; }
+      100% { box-shadow: 0 0 3rem $primary; }
+    }
+    height: 100%;
+    position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+    z-index: 0;
+    animation: scalecenter 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite both;
+		box-shadow: 0 0 20px $primary;
+  }
+}
+
+.logo{
+  img{
+    max-height: 35px;
+    filter: brightness(0) invert(.5);
+  }
+}
+
+.service{
+	transition: transform .2s ease;
+  background: $dark;
+  color: $white;
+	img{filter: brightness(0) invert(1);}
+	&:hover{
+		transform: translateY(-1rem);
+	}
+}

@@ -1,0 +1,97 @@
+// 1. Your custom variables and variable overwrites.
+$dark: #162235;
+$light: #f3f9fc;
+$primary: #4668c6;
+$secondary: #94a8de;
+$text-muted: #b3b3b3;
+
+$font-size-root: 18px;
+$font-family-sans-serif: 'Satoshi-Variable', Arial, sans-serif;
+$display-font-weight: bold;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 6,
+  9: $spacer * 7,
+  10: $spacer * 8,
+);
+
+$btn-border-radius: 50px;
+$btn-padding-y: 12px;
+$btn-padding-x: 32px;
+$btn-font-weight: bold;
+
+$border-radius: 0;
+$border-color: rgba(#fff,.1);
+
+$card-bg: white;
+$card-spacer-x: 1.5rem;
+$card-spacer-y: 1.5rem;
+
+$badge-font-size: 10px;
+$badge-font-weight: 400;
+$badge-color: $text-muted;
+$badge-border-radius: 3px;
+
+$gradient: linear-gradient(90deg, lighten($dark, 20%), $primary 29%,  $secondary 58%, lighten($primary, 10%));
+
+
+$nav-link-padding-y:                .25rem;
+$nav-link-padding-x:                .5rem;
+// $nav-link-font-size:                null;
+// $nav-link-font-weight:              null;
+$nav-link-color:                    $text-muted;
+$nav-link-hover-color:              white;
+
+@import '/font/css/satoshi.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css';
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'home.scss';
+@import 'porfolio.scss';
+
+
+body{
+  background: $light;
+}
+
+.container{
+	max-width: 1160px;
+}
+
+.bg-dark{
+  background: darken(#162235, 6%) !important;
+}
+
+h1,h2,h3,h4{
+  span{
+     background-image: $gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.btn-colored{
+  padding: 1rem 84px 1rem 40px;
+  background-color: transparent;
+  background-color: $dark;
+  background-image: url(/img/btn-arrow.svg);
+  background-position: 97% 50%, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: no-repeat, no-repeat;
+  color: #fff !important;
+  border: 0px solid $white;
+  &:hover{ background-color: lighten($dark,5%); }
+}
+
+.navbar-brand{
+  font-weight: bold;
+}
