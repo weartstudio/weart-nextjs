@@ -21,7 +21,7 @@ function Portfolio() {
 					<Row xs={1} className='g-5'>
 						<Col>
 							<h2 className="display-5 mt-0">Kiemelt <span className='colored'>referenciák</span></h2>
-							<p className='text-meta'>Over the years, I've partnered with startups of all sizes and various stages to create some truly unique products. Here are a few that I feel were the most challenging yet rewarding.</p>
+							<p className='text-meta'>{`Over the years, I've partnered with startups of all sizes and various stages to create some truly unique products. Here are a few that I feel were the most challenging yet rewarding.`}</p>
 						</Col>
 						<PortfolioItem data={pid} />
 						<PortfolioItem data={pid} />

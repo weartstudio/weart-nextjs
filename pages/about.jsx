@@ -11,7 +11,7 @@ function about() {
 							<h1 className="display-5">
 								About <span className="colored">me</span>
 							</h1>
-							<p>Over the years, I've partnered with startups of all sizes and various stages to create some truly unique products. Here are a few that I feel were the most challenging yet rewarding.</p>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus cupiditate voluptas sunt hic laborum aperiam, ea corporis? Cum quia voluptas consectetur, amet nemo soluta deleniti suscipit nulla, rerum corrupti velit!</p>
 						</Col>
 					</Row>
 				</Container>

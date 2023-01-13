@@ -22,7 +22,7 @@ function portfolio() {
 						<h1 className="display-5">
 							Selected <span className="colored">Porjects</span>
 						</h1>
-						<p>Over the years, I've partnered with startups of all sizes and various stages to create some truly unique products. Here are a few that I feel were the most challenging yet rewarding.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perspiciatis iure officia blanditiis rem, nihil dolorum assumenda ipsum numquam nesciunt cum voluptatum, quisquam officiis? Dolorem repudiandae porro iusto dignissimos illum.</p>
 					</Col>
 				</Row>
 			</Container>
