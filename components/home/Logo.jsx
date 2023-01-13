@@ -2,7 +2,7 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 
-function Logo() {
+function Logo({data}) {
 
 	const logos = [
     '/img/home/vscode.svg',
@@ -18,7 +18,7 @@ function Logo() {
 		<div className='border-top border-bottom py-4 bg-dark'>
 			<Container>
 				<Row lg='auto' md='4' sm='3' xs='2' className='justify-content-lg-between justify-content-center py-2 g-4 text-center'>
-					{logos.map((img,i) => <div className='logo' key={i}><img className='img-fluid' src={img} alt="" /></div>)}
+					{data.map((img,i) => <div className='logo' key={i}><img className='img-fluid' src={img.img.sourceUrl} alt="" /></div>)}
 				</Row>
 			</Container>
 		</div>

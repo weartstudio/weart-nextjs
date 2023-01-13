@@ -8,16 +8,16 @@ function Hero({data}) {
 			<Container className='text-center'>
 				<Row lg='2' xs='1' className='g-5 align-items-center'>
 					<Col className='text-lg-start'>
-						<h1 className='display-4 text-white' dangerouslySetInnerHTML={{__html:data?.title}}></h1>
+						<h1 className='display-4 text-white' dangerouslySetInnerHTML={{__html:data?.herotitle}}></h1>
 						<div className="my-4 text-muted">
-							<p>{data?.text}</p>
+							<p>{data?.herotext}</p>
 						</div>
 						<Button href='/contact' variant="colored">Beszélgessünk</Button>
 					</Col>
 					<Col className='text-lg-end'>
 						<div className="hero-img">
-							<Image className='img-bg' alt='' fill src={data?.img.sourceUrl} />
-							<Image className='img-fluid' alt='' width={460} height={460} src={data?.img.sourceUrl} />
+							<Image className='img-bg' alt='' fill src={data?.heroimg.sourceUrl} />
+							<Image className='img-fluid' alt='' width={460} height={460} src={data?.heroimg.sourceUrl} />
 						</div>
 					</Col>
 				</Row>
