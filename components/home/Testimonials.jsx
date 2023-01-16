@@ -5,15 +5,15 @@ import { testimonialQuery } from '../../helpers/queries'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
 function Testimonials({data}) {
-	console.log(data)
+
 	const [index,setIndex] = useState(0);
 	return (
 		<div className='py-7 bg-dark text-white'>
 			<Container>
 				<Row>
 					<Col>
-						<h3 className='display-5'>{data.testimonialblocktitle}</h3>
-						<p className='text-muted'>{data.testimonialblocktext}</p>
+						<h3 className='display-5' dangerouslySetInnerHTML={{__html: data?.testimonialblocktitle}}></h3>
+						<p className='text-muted'>{data?.testimonialblocktext}</p>
 					</Col>
 					<Col>
 						{	index	>	0 &&

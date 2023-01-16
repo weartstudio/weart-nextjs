@@ -32,11 +32,10 @@ export async function getStaticProps(){
     cache: new InMemoryCache()
   });
 
-  console.log(client)
   const {data} = await client.query({
     query: homePageQuery
   })
-  console.log(data)
+
   return {
     props: {
       data: data
