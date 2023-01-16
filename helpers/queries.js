@@ -1,34 +1,6 @@
 import { gql } from "@apollo/client";
 
 export const homePageQuery = gql`query {
-  pageBy(pageId: 12) {
-    title
-    homeHero {
-      herotext
-      herotitle
-      heroimg {
-        sourceUrl(size: LARGE)
-      }
-    }
-    homeServices {
-      serviceServices {
-        text
-        title
-        icon {
-          sourceUrl(size: LARGE)
-        }
-      }
-      serviceText
-      serviceTitle
-    }
-    homeLogos {
-      homelogos {
-        img {
-          sourceUrl(size: LARGE)
-        }
-      }
-    }
-  }
   acfOptionsGlobalOptions {
     testimonial {
       testimonialblocktext
@@ -40,18 +12,44 @@ export const homePageQuery = gql`query {
       }
     }
   }
+  page(id: "12", idType: DATABASE_ID) {
+    homeHero {
+      herotext
+      herotitle
+      heroimg {
+        sourceUrl(size: LARGE)
+      }
+    }
+    homeLogos {
+      homelogos {
+        img {
+          sourceUrl(size: LARGE)
+        }
+      }
+    }
+    homeServices {
+      serviceText
+      serviceTitle
+      serviceServices {
+        title
+        text
+        icon {
+          sourceUrl(size: LARGE)
+        }
+      }
+    }
+  }
 }`
 
 export const testimonialQuery = gql`query {
-  testimonials {
-    edges {
-      node {
-        title
-        testimonials {
-          testimonialname
-          testimonialtag
-          testimonialtext
-        }
+  acfOptionsGlobalOptions {
+    testimonial {
+      testimonialblocktext
+      testimonialblocktitle
+      testimonialblockcontent {
+        text
+        tag
+        name
       }
     }
   }
