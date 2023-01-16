@@ -22,7 +22,7 @@ export default function Home({data}) {
       <Services data={data.pageBy.homeServices} />
       <Portfolio />
       {/* <Process /> */}
-      <Testimonials />
+      <Testimonials data={data.acfOptionsGlobalOptions.testimonial} />
       <About />
       {/* <Blog /> */}
     </>

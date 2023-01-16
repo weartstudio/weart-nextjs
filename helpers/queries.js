@@ -29,4 +29,30 @@ export const homePageQuery = gql`query {
       }
     }
   }
+  acfOptionsGlobalOptions {
+    testimonial {
+      testimonialblocktext
+      testimonialblocktitle
+      testimonialblockcontent {
+        text
+        tag
+        name
+      }
+    }
+  }
+}`
+
+export const testimonialQuery = gql`query {
+  testimonials {
+    edges {
+      node {
+        title
+        testimonials {
+          testimonialname
+          testimonialtag
+          testimonialtext
+        }
+      }
+    }
+  }
 }`

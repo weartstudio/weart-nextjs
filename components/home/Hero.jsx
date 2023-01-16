@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
 function Hero({data}) {
-	console.log(data)
 	return (
 		<div className="py-6 bg-dark overflow-hidden">
 			<Container className='text-center'>

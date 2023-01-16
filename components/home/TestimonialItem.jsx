@@ -1,8 +1,7 @@
 import React from 'react'
 import { Col, Card } from 'react-bootstrap'
 
-function TestimonialItem() {
-
+function TestimonialItem({data}) {
 	function stars(){
 		let arr = [];
 		for (let i = 0; i < 5; i++) {
@@ -16,8 +15,8 @@ function TestimonialItem() {
 			<Card className='service border-0 border-top border-primary border-3 card'>
 				<Card.Body>
 					{ stars() }
-					<p className='text-muted'>A megadott referenciákon túlmutató, sok kreatív kiegészítéssel bővített, igényes végeredményt kaptam. A munka és a kommunikáció is pontos, gyors volt, ami számomra kifejezetten fontos.</p>
-					<p>Szentgáli Csaba <br /> Operatőr</p>
+					<p className='text-muted'>{data?.text}</p>
+					<p>{data?.name} <br /> {data?.tag}</p>
 				</Card.Body>
 			</Card>
 		</Col>
@@ -25,3 +24,5 @@ function TestimonialItem() {
 }
 
 export default TestimonialItem
+
+
