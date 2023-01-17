@@ -11,6 +11,10 @@ export const homePageQuery = gql`query {
         name
       }
     }
+    optionsFooter {
+      footertext
+      footertitle
+    }
   }
   page(id: "12", idType: DATABASE_ID) {
     homeHero {

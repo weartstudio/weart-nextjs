@@ -1,0 +1,33 @@
+
+	blockquote{
+		position: relative;
+		padding: 1rem 0 0 1rem;
+		p{
+			font-size: 1.4rem;
+			position: relative;
+			color: currentColor;
+		}
+		cite{
+			font-size: 1rem;
+			text-align: right;
+		}
+		&:before{
+			content: '\f10e';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: bold;
+			font-size: 120px;
+			position: absolute;
+			top: -1rem;
+			left: 0;
+			line-height: 1;
+			height: 120px;
+			z-index: 0;
+			color: lighten($primary,20%);
+			opacity: .25;
+		}
+	}
+
+
+	.carousel{
+		padding-bottom: 0rem;
+	}

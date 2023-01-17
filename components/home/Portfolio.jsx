@@ -15,7 +15,7 @@ function Portfolio() {
 	}
 
 	return (
-		<Container className='py-6'>
+		<Container className='py-lg-8 py-5'>
 			<Row lg={2} xs={1} className='g-5'>
 				<Col>
 					<Row xs={1} className='g-5'>
