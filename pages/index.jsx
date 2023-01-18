@@ -18,7 +18,7 @@ export default function Home({data}) {
       <Hero data={data?.page.homeHero} />
       <Logo data={data?.page.homeLogos.homelogos} />
       <Services data={data?.page.homeServices} />
-      <Portfolio />
+      <Portfolio data={data?.page.homePortfolio} />
       <Testimonials data={data?.acfOptionsGlobalOptions.testimonial} />
       <About />
     </>

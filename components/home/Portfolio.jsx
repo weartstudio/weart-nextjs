@@ -3,16 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 import PortfolioItem from './PortfolioItem'
 
 
-function Portfolio() {
-
-	const pid = {
-		title: 'Szuri-káta',
-		text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero dignissimos aliquid dolorem.',
-		tech: 'WordPress, ACF, Timber, UIkit',
-		tag: 'Állatorvosi rendelő',
-		img: '/img/projects/szurikata.jpeg',
-		url: '#'
-	}
+function Portfolio({data}) {
 
 	return (
 		<Container className='py-lg-8 py-5'>
@@ -20,17 +11,19 @@ function Portfolio() {
 				<Col>
 					<Row xs={1} className='g-5'>
 						<Col>
-							<h2 className="display-5 mt-0">Kiemelt <span className='colored'>referenciák</span></h2>
-							<p className='text-meta'>{`Over the years, I've partnered with startups of all sizes and various stages to create some truly unique products. Here are a few that I feel were the most challenging yet rewarding.`}</p>
+							<h2 className="display-5 mt-0" dangerouslySetInnerHTML={{__html: data?.homeportfoliotitle}}></h2>
+							<p className='text-meta'>{data?.homeportfoliotext}</p>
 						</Col>
-						<PortfolioItem data={pid} />
-						<PortfolioItem data={pid} />
+						{data?.homeportfoliofeatured.map((item, i)=>{
+							if(i<2) return <PortfolioItem key={i} data={item} />
+						})}
 					</Row>
 				</Col>
 				<Col>
 					<Row className='mt-5 g-5' xs={1}>
-						<PortfolioItem data={pid} />
-						<PortfolioItem data={pid} />
+						{data?.homeportfoliofeatured.map((item, i)=>{
+							if(i>2 && i<4) return <PortfolioItem key={i} data={item} />
+						})}
 						<Col className='d-flex justify-content-center'>
 							<Button href='/portfolio' variant='colored'>Még több projekt</Button>
 						</Col>

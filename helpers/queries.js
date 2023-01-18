@@ -42,18 +42,44 @@ export const homePageQuery = gql`query {
         }
       }
     }
+    homePortfolio {
+      homeportfoliotitle
+      homeportfoliotext
+      homeportfoliofeatured {
+        ... on Project {
+          id
+          portfolio {
+            portfoliotag
+            portfoliotechstack
+          }
+          title
+          featuredImage {
+            node {
+              sourceUrl(size: LARGE)
+            }
+          }
+        }
+      }
+    }
   }
 }`
 
-export const testimonialQuery = gql`query {
-  acfOptionsGlobalOptions {
-    testimonial {
-      testimonialblocktext
-      testimonialblocktitle
-      testimonialblockcontent {
-        text
-        tag
-        name
+export const portfolioPageQuery = gql`query {
+  page(id: "58", idType: DATABASE_ID) {
+    content
+    title
+  }
+  projects {
+    nodes {
+      title
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+      portfolio {
+        portfoliotechstack
+        portfoliotag
       }
     }
   }

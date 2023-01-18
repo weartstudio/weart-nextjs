@@ -1,8 +1,10 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import PortfolioItem from '../components/home/PortfolioItem'
+import { ApolloClient,InMemoryCache } from '@apollo/client'
+import { portfolioPageQuery } from '../helpers/queries'
 
-function portfolio() {
+function portfolio({data}) {
 
 	const pid = {
 		title: 'Szuri-káta',
@@ -19,22 +21,17 @@ function portfolio() {
 			<Container>
 				<Row className='justify-content-center'>
 					<Col lg="8" md="10">
-						<h1 className="display-5">
-							Selected <span className="colored">Porjects</span>
-						</h1>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perspiciatis iure officia blanditiis rem, nihil dolorum assumenda ipsum numquam nesciunt cum voluptatum, quisquam officiis? Dolorem repudiandae porro iusto dignissimos illum.</p>
+						<h1 className="display-5" dangerouslySetInnerHTML={{__html: data?.page.title}}></h1>
+						<div dangerouslySetInnerHTML={{__html: data?.page.content}}></div>
 					</Col>
 				</Row>
 			</Container>
 		</div>
-				<Container className='my-5'>
+				<Container className='my-5 my-lg-8'>
 					<Row className='g-5' xs={1} lg={2}>
-						<PortfolioItem data={pid} />
-						<PortfolioItem data={pid} />
-						<PortfolioItem data={pid} />
-						<PortfolioItem data={pid} />
-						<PortfolioItem data={pid} />
-						<PortfolioItem data={pid} />
+						{data?.projects.nodes.map((item,i)=>{
+							return <PortfolioItem key={i} data={item} />
+						})}
 					</Row>
 				</Container>
 		</>
@@ -42,3 +39,21 @@ function portfolio() {
 }
 
 export default portfolio
+
+export async function getStaticProps(){
+
+  const client = new ApolloClient({
+    uri: process.env.WP,
+    cache: new InMemoryCache()
+  });
+
+  const {data} = await client.query({
+    query: portfolioPageQuery
+  })
+
+  return {
+    props: {
+      data: data
+    }
+  }
+}
