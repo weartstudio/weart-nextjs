@@ -6,3 +6,5 @@ API: WordPress GraphQL
 Style: Sass, Bootstrap
 
 The site is hosted on Vercel.
+
+The design inspiration was: https://myfolio-portfolio-webflow-template.webflow.io/
