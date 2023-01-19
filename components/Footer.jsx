@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { Container, Button, Row, Col, Nav } from 'react-bootstrap'
+import { useRouter } from 'next/router'
 
 function Footer() {
 	const [thisYear] = useState(new Date().getFullYear())
 	return (
 		<div className='bg-dark'>
+
 			<Container className='text-center text-white py-5 py-lg-8'>
 				<Row className='justify-content-center'>
 					<Col lg={8} >

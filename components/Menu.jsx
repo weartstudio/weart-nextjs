@@ -12,7 +12,6 @@ export default function Menu() {
             <Nav.Link href="/#about">Rólam</Nav.Link>
             <Nav.Link href="/portfolio">Portfolió</Nav.Link>
             <Nav.Link href="/contact">Kapcsolat</Nav.Link>
-            <Nav.Link href="https://myfolio-portfolio-webflow-template.webflow.io/">minta</Nav.Link>
             <Nav.Link href="https://github.com/weartstudio">
 							<i className="fa-brands fa-github"></i>
 							<span className="d-lg-none ms-lg-0 ms-2">Github</span>

@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import PortfolioItem from '../components/home/PortfolioItem'
 import { ApolloClient,InMemoryCache } from '@apollo/client'
 import { portfolioPageQuery } from '../helpers/queries'
+import Footer from '../components/Footer'
 
 function portfolio({data}) {
 
