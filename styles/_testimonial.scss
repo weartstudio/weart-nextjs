@@ -37,8 +37,9 @@ blockquote{
 			border-radius: 50%;
 			border: 0;
 			background: transparent;
-			box-shadow: 0 0 2px 0 $primary;
+			box-shadow: 0 0 0 2px $primary;
 			padding: 0;
+			margin: .5rem;
 		}
 		button.active{
 			background: $primary;
