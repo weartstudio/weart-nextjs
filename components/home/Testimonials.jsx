@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
-import { Container, Carousel, Row, Col, Button } from 'react-bootstrap'
+import { Container, Carousel, Row, Col } from 'react-bootstrap'
 
 function Testimonials({data}) {
 
 	return (
-		// <div className='py-lg-8 py-5  bg-dark text-white'>
+		<div className='py-3'>
 			<Container style={{minHeight: 250}}>
 				<Row className='justify-content-center'>
 					<Col lg='9'>
-						<Carousel slide={true} controls={false} indicators={false}>
+						<Carousel slide={true} controls={false} indicators={true}>
 							{data.testimonialblockcontent.map((item,i)=>(
 								<Carousel.Item key={i}>
 									<blockquote className='mb-0 d-flex flex-column'>
@@ -21,7 +20,7 @@ function Testimonials({data}) {
 					</Col>
 				</Row>
 			</Container>
-		// </div>
+		</div>
 	)
 }
 

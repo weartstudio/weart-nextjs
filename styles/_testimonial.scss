@@ -1,33 +1,47 @@
-
-	blockquote{
+blockquote{
+	position: relative;
+	padding: 1rem 0 0 1rem;
+	p{
+		font-size: 1.4rem;
 		position: relative;
-		padding: 1rem 0 0 1rem;
-		p{
-			font-size: 1.4rem;
-			position: relative;
-			color: currentColor;
+		color: currentColor;
+	}
+	cite{
+		font-size: 1rem;
+		text-align: right;
+	}
+	&:before{
+		content: '\f10e';
+		font-family: 'Font Awesome 5 Free';
+		font-weight: bold;
+		font-size: 120px;
+		position: absolute;
+		top: -1rem;
+		left: 0;
+		line-height: 1;
+		height: 120px;
+		z-index: 0;
+		color: lighten($primary,20%);
+		opacity: .25;
+	}
+}
+
+.carousel{
+	padding-bottom: 0rem;
+	.carousel-indicators{
+		bottom: 0;
+		align-items: center;
+		button{
+			width: .5rem ;
+			height: .5rem ;
+			border-radius: 50%;
+			border: 0;
+			background: transparent;
+			box-shadow: 0 0 2px 0 $primary;
+			padding: 0;
 		}
-		cite{
-			font-size: 1rem;
-			text-align: right;
-		}
-		&:before{
-			content: '\f10e';
-			font-family: 'Font Awesome 5 Free';
-			font-weight: bold;
-			font-size: 120px;
-			position: absolute;
-			top: -1rem;
-			left: 0;
-			line-height: 1;
-			height: 120px;
-			z-index: 0;
-			color: lighten($primary,20%);
-			opacity: .25;
+		button.active{
+			background: $primary;
 		}
 	}
-
-
-	.carousel{
-		padding-bottom: 0rem;
-	}
+}
