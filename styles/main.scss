@@ -32,7 +32,7 @@ $btn-font-weight: bold;
 $border-radius: 0;
 $border-color: rgba(#fff,.1);
 
-$card-bg: white;
+$card-bg: $light;
 $card-spacer-x: 1.5rem;
 $card-spacer-y: 1.5rem;
 
@@ -60,7 +60,7 @@ $nav-link-hover-color:              white;
 
 
 body{
-  background: $light;
+  // background: $light;
 }
 
 .container{
