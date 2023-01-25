@@ -3,8 +3,7 @@ $dark: #162235;
 $light: #f3f9fc;
 $primary: #4668c6;
 $secondary: #94a8de;
-$text-muted: #b3b3b3;
-$text-muted: #f5f5f5;
+$text-muted: #f5f5f5; //#b3b3b3;
 
 $font-size-root: 18px;
 $font-family-sans-serif: 'Satoshi-Variable', Arial, sans-serif;
@@ -31,7 +30,7 @@ $btn-padding-x: 32px;
 $btn-font-weight: bold;
 
 $border-radius: 0;
-$border-color: rgba(#fff,.1);
+$border-color: rgba(#fff,.25);
 
 $card-bg: $light;
 $card-spacer-x: 1.5rem;
@@ -60,27 +59,26 @@ $nav-link-hover-color:              white;
 @import 'testimonial.scss';
 
 
-body{
-  // background: $light;
-}
+// body{
+//   background: $light;
+// }
 
 .container{
 	max-width: 1160px;
 }
 
 .bg-dark{
-  background: darken(#162235, 6%) !important;
-  background: darken($dark, 100%) !important;
+  background: darken(#162235, 8%) !important;
 }
 
-h1,h2,h3,h4{
-  span{
-    //  background-image: $gradient;
-    // -webkit-background-clip: text;
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
-  }
-}
+// h1,h2,h3,h4{
+//   span{
+//     background-image: $gradient;
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//   }
+// }
 
 .btn-colored{
   padding: 1rem 84px 1rem 40px;

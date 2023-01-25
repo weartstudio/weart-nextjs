@@ -64,6 +64,24 @@ export const homePageQuery = gql`query {
   }
 }`
 
+export const testimonialQuery = gql`query {
+  acfOptionsGlobalOptions {
+    testimonial {
+      testimonialblocktext
+      testimonialblocktitle
+      testimonialblockcontent {
+        text
+        tag
+        name
+      }
+    }
+    optionsFooter {
+      footertext
+      footertitle
+    }
+  }
+}`
+
 export const portfolioPageQuery = gql`query {
   page(id: "58", idType: DATABASE_ID) {
     content

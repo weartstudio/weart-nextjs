@@ -11,11 +11,11 @@ function PortfolioItem({data}) {
 					<Card.Title>{data?.title}</Card.Title>
 					<Row>
 						<Col>
-							<Badge bg='light'>Tech stack</Badge>
+							<Badge bg='secondary'>Tech stack</Badge>
 							<p className='mt-1'>{data?.portfolio.portfoliotechstack}</p>
 						</Col>
 						<Col className='text-end' xs='auto'>
-							<Badge bg='light'>Címke</Badge>
+							<Badge bg='secondary'>Címke</Badge>
 							<p className='mt-1'>{data?.portfolio.portfoliotag}</p>
 						</Col>
 					</Row>

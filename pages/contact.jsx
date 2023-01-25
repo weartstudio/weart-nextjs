@@ -1,10 +1,10 @@
 import React from 'react'
-import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap'
 import Footer from '../components/Footer'
 import Menu from '../components/Menu'
 import Testimonials from '../components/home/Testimonials'
 import { ApolloClient, InMemoryCache } from '@apollo/client'
-import { homePageQuery } from '../helpers/queries'
+import { testimonialQuery } from '../helpers/queries'
 
 function contact({data}) {
 	return (
@@ -13,24 +13,31 @@ function contact({data}) {
 
 				<Row lg={2} xs={1} className="py-5 py-lg-8 g-5">
 					<Col>
-						<h1 class="display-4">Van egy projekt ötleted? <span class="colored">Dolgozzunk együtt</span> rajta!</h1>
+						<h1 class="display-5">Van egy projekt ötleted? <span class="colored">Dolgozzunk együtt</span> rajta!</h1>
 					</Col>
 					<Col>
-						<Form className='bg-white p-4'>
-							<Form.Group className="mb-3">
-								<Form.Control type="text" placeholder="Név" />
-							</Form.Group>
-							<Form.Group className="mb-3">
-								<Form.Control type="email" placeholder="Email" />
-							</Form.Group>
-							<Form.Group className="mb-3">
-								<Form.Control type="text" placeholder="Weboldal (ha van)" />
-							</Form.Group>
-							<Form.Group className="mb-3">
-								<Form.Control as="textarea" rows={4} />
-							</Form.Group>
-							<Button variant='primary'>Küldés</Button>
-						</Form>
+						<Card class='border-0 border-top border-primary border-3'>
+							<Card.Body>
+								<Form className='p-4'>
+									<Form.Group className="mb-3">
+										<Form.Control type="text" placeholder="Név" />
+									</Form.Group>
+									<Form.Group className="mb-3">
+										<Form.Control type="email" placeholder="Email" />
+									</Form.Group>
+									<Form.Group className="mb-3">
+										<Form.Control type="text" placeholder="Weboldal (ha van)" />
+									</Form.Group>
+									<Form.Group className="mb-3">
+										<Form.Control type="text" placeholder="Büzsé" />
+									</Form.Group>
+									<Form.Group className="mb-3">
+										<Form.Control as="textarea" rows={4} />
+									</Form.Group>
+									<Button variant='primary'>Küldés</Button>
+								</Form>
+							</Card.Body>
+						</Card>
 					</Col>
 				</Row>
 
@@ -64,7 +71,7 @@ export async function getStaticProps(){
   });
 
   const {data} = await client.query({
-    query: homePageQuery
+    query: testimonialQuery
   })
 
   return {
