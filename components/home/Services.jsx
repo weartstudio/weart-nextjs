@@ -5,7 +5,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap'
 function Services({data}) {
 	return (
 		<div className="bg-dark text-white">
-			<Container className='pt-5 pb-lg-7 pb-5'>
+			<Container className='pt-5 pb-lg-8 pb-5'>
 				<div className="text-center mb-5">
 					<h2 className="display-5" dangerouslySetInnerHTML={{__html: data?.serviceTitle }}></h2>
 					<div style={{maxWidth: 520}} className='text-muted mx-auto'>

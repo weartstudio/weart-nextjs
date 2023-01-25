@@ -69,14 +69,15 @@ body{
 
 .bg-dark{
   background: darken(#162235, 6%) !important;
+  background: darken($dark, 100%) !important;
 }
 
 h1,h2,h3,h4{
   span{
-     background-image: $gradient;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    //  background-image: $gradient;
+    // -webkit-background-clip: text;
+    // background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
 }
 

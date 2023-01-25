@@ -7,7 +7,7 @@ function PortfolioItem({data}) {
 		<Col>
 			<Card className='project small'>
 				<Card.Body>
-					<Image className='img-fluid mb-3' alt='' src={data?.featuredImage.node.sourceUrl} width={485} height={275} />
+					<Image className='img-fluid mb-3 border-bottom border-2 border-dark' alt='' src={data?.featuredImage.node.sourceUrl} width={485} height={275} />
 					<Card.Title>{data?.title}</Card.Title>
 					<Row>
 						<Col>
