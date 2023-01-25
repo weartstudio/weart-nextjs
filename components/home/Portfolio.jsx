@@ -15,14 +15,14 @@ function Portfolio({data}) {
 							<p className='text-meta'>{data?.homeportfoliotext}</p>
 						</Col>
 						{data?.homeportfoliofeatured.map((item, i)=>{
-							if(i<2) return <PortfolioItem key={i} data={item} />
+							if(i<=1) return <PortfolioItem key={i} data={item} />
 						})}
 					</Row>
 				</Col>
 				<Col>
 					<Row className='mt-5 g-5' xs={1}>
 						{data?.homeportfoliofeatured.map((item, i)=>{
-							if(i>2 && i<4) return <PortfolioItem key={i} data={item} />
+							if(i>=2 && i<=3) return <PortfolioItem key={i} data={item} />
 						})}
 						<Col className='d-flex justify-content-center'>
 							<Button href='/portfolio' variant='colored'>Még több projekt</Button>

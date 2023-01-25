@@ -11,7 +11,7 @@ function contact({data}) {
 		<div className='bg-dark text-white'>
 			<Container>
 
-				<Row lg={2} xs={1} className="py-5 py-lg-8">
+				<Row lg={2} xs={1} className="py-5 py-lg-8 g-5">
 					<Col>
 						<h1 class="display-4">Van egy projekt ötleted? <span class="colored">Dolgozzunk együtt</span> rajta!</h1>
 					</Col>

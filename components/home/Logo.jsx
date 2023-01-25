@@ -4,16 +4,6 @@ import { Container, Row } from 'react-bootstrap'
 
 function Logo({data}) {
 
-	const logos = [
-    '/img/home/vscode.svg',
-    '/img/home/figma.svg',
-    '/img/home/js.svg',
-    '/img/home/react.png',
-    '/img/home/nextjs.svg',
-    '/img/home/wordpress.svg',
-    '/img/home/git.svg',
-  ];
-
 	return (
 		<div className='border-top border-bottom py-4 bg-dark'>
 			<Container>

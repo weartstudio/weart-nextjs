@@ -42,6 +42,7 @@ function About() {
 					<p className='small text-muted text-center'>Akikkek már együtt dolgoztunk.</p>
 
 
+
 				</Col>
 			</Row>
 		</Container>
