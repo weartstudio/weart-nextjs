@@ -102,3 +102,38 @@ export const portfolioPageQuery = gql`query {
     }
   }
 }`
+
+export const posts = gql`query {
+	posts(where: {status: PUBLISH}) {
+		edges {
+			node {
+				excerpt
+				slug
+				title
+				date
+				id
+			}
+		}
+	}
+}`;
+
+
+export const posts_slug = gql`query NewQuery {
+  posts(where: {status: PUBLISH}) {
+    edges {
+      node {
+        slug
+        id
+      }
+    }
+  }
+}`;
+
+export const posts_by_slug = gql`
+query ($slugUrl: String!) {
+	postBy(slug: $slugUrl) {
+		id
+		title
+		content
+	}
+}`;

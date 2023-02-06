@@ -27,3 +27,12 @@
     }
   }
 }
+
+.project.dark{
+  transition: transform .2s ease;
+  background: $dark;
+  color: $white;
+	&:hover{
+		transform: translateY(-1rem);
+	}
+}

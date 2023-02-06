@@ -5,7 +5,7 @@ export default function Menu() {
 	return (
 		<Navbar expand="lg" bg="dark" variant="dark" className="py-3">
 			<Container fluid="xl">
-				<Navbar.Brand href="/">weart</Navbar.Brand>
+				<Navbar.Brand href="/" className="font-monospace" style={{letterSpacing: 3}}>{`<weart />`}</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
