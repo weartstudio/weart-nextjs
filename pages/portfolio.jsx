@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import PortfolioItem from '../components/home/PortfolioItem'
+import PortfolioItem from '../components/PortfolioItem'
 import { ApolloClient,InMemoryCache } from '@apollo/client'
 import { portfolioPageQuery } from '../helpers/queries'
 

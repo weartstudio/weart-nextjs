@@ -10,13 +10,13 @@ function contact({data}) {
 	return (
 		<div className='bg-dark text-white'>
 			<Container>
-
-				<Row lg={2} xs={1} className="py-5 py-lg-8 g-5">
+				<Row lg={2} xs={1} className="py-5 pt-lg-7 pb-5 g-5">
 					<Col>
 						<h1 class="display-5">Van egy projekt ötleted? <span class="colored">Dolgozzunk együtt</span> rajta!</h1>
+						<p className='h3 mt-5'><i className="fa-solid fa-envelope text-primary me-3"></i>balazs@weart.hu</p>
 					</Col>
 					<Col>
-						<Card class='border-0 border-top border-primary border-3'>
+						<Card class='bg-dark-alt'>
 							<Card.Body>
 								<Form className='p-4'>
 									<Form.Group className="mb-3">
@@ -29,24 +29,21 @@ function contact({data}) {
 										<Form.Control type="text" placeholder="Weboldal (ha van)" />
 									</Form.Group>
 									<Form.Group className="mb-3">
-										<Form.Control type="text" placeholder="Büzsé" />
-									</Form.Group>
-									<Form.Group className="mb-3">
 										<Form.Control as="textarea" rows={4} />
 									</Form.Group>
-									<Button variant='primary'>Küldés</Button>
+									<div className="mt-5">
+										<Button variant='primary'>Küldés</Button>
+									</div>
 								</Form>
 							</Card.Body>
 						</Card>
 					</Col>
 				</Row>
-
-				<hr />
-				<div className="py-5">
-					<Testimonials data={data?.acfOptionsGlobalOptions.testimonial} />
-				</div>
-
 			</Container>
+
+			<Testimonials data={data?.acfOptionsGlobalOptions.testimonial} />
+
+
 		</div>
 	)
 }

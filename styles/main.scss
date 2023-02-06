@@ -38,7 +38,7 @@ $card-spacer-y: 1.5rem;
 
 $badge-font-size: 10px;
 $badge-font-weight: 400;
-$badge-color: $text-muted;
+$badge-color: white;
 $badge-border-radius: 3px;
 
 $gradient: linear-gradient(90deg, lighten($dark, 20%), $primary 29%,  $secondary 58%, lighten($primary, 10%));
@@ -50,6 +50,12 @@ $nav-link-padding-x:                .5rem;
 // $nav-link-font-weight:              null;
 $nav-link-color:                    $text-muted;
 $nav-link-hover-color:              white;
+
+$input-bg: transparent;
+$input-color: white;
+$input-border-color: $primary;
+$input-focus-box-shadow: none;
+$input-focus-border-color: $secondary;
 
 @import '/font/css/satoshi.css';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css';
@@ -68,17 +74,12 @@ $nav-link-hover-color:              white;
 }
 
 .bg-dark{
-  background: darken(#162235, 8%) !important;
+  background: darken($dark, 8%) !important;
 }
 
-// h1,h2,h3,h4{
-//   span{
-//     background-image: $gradient;
-//     -webkit-background-clip: text;
-//     background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//   }
-// }
+.bg-dark-alt{
+  background: $dark;
+}
 
 .btn-colored{
   padding: 1rem 84px 1rem 40px;
@@ -95,4 +96,10 @@ $nav-link-hover-color:              white;
 
 .navbar-brand{
   font-weight: bold;
+}
+
+.form-select,
+.form-control{
+  border-width: 0;
+  border-bottom-width: 2px;
 }

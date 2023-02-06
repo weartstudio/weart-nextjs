@@ -5,10 +5,10 @@ import { useRouter } from 'next/router'
 function Footer() {
 	const [thisYear] = useState(new Date().getFullYear())
 	return (
-		<div className='bg-dark'>
+		<div className='bg-dark border-top'>
 
 			{/* copyright bar */}
-			<Container className='text-muted small py-4 border-top text-center d-flex flex-column align-items-center'>
+			<Container className='text-muted small py-4 text-center d-flex flex-column align-items-center'>
 
 				<Nav className='mx-auto justify-content-center mb-4'>
 					<Nav.Link href="/about">Rólam</Nav.Link>
