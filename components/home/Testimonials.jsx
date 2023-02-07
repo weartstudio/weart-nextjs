@@ -3,7 +3,7 @@ import { Container, Carousel, Row, Col } from 'react-bootstrap'
 function Testimonials({data}) {
 
 	return (
-		<div className='py-6 bg-dark text-white'>
+		<div className='py-5 py-lg-7 bg-dark text-white'>
 			<Container style={{minHeight: 250}}>
 				<Row className='justify-content-center'>
 					<Col lg='9'>

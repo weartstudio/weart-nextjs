@@ -3,48 +3,19 @@ import { gql } from "@apollo/client";
 export const homePageQuery = gql`query {
   acfOptionsGlobalOptions {
     testimonial {
-      testimonialblocktext
-      testimonialblocktitle
       testimonialblockcontent {
         text
         tag
         name
       }
     }
-    optionsFooter {
-      footertext
-      footertitle
-    }
   }
   page(id: "12", idType: DATABASE_ID) {
-    homeHero {
-      herotext
-      herotitle
-      heroimg {
-        sourceUrl(size: LARGE)
-      }
-    }
-    homeLogos {
-      homelogos {
-        img {
-          sourceUrl(size: LARGE)
-        }
-      }
-    }
-    homeServices {
-      serviceText
-      serviceTitle
-      serviceServices {
-        title
-        text
-        icon {
-          sourceUrl(size: LARGE)
-        }
-      }
+    homeAbout {
+      aboutleft
+      aboutright
     }
     homePortfolio {
-      homeportfoliotitle
-      homeportfoliotext
       homeportfoliofeatured {
         ... on Project {
           id
@@ -67,17 +38,11 @@ export const homePageQuery = gql`query {
 export const testimonialQuery = gql`query {
   acfOptionsGlobalOptions {
     testimonial {
-      testimonialblocktext
-      testimonialblocktitle
       testimonialblockcontent {
         text
         tag
         name
       }
-    }
-    optionsFooter {
-      footertext
-      footertitle
     }
   }
 }`
@@ -102,38 +67,3 @@ export const portfolioPageQuery = gql`query {
     }
   }
 }`
-
-export const posts = gql`query {
-	posts(where: {status: PUBLISH}) {
-		edges {
-			node {
-				excerpt
-				slug
-				title
-				date
-				id
-			}
-		}
-	}
-}`;
-
-
-export const posts_slug = gql`query NewQuery {
-  posts(where: {status: PUBLISH}) {
-    edges {
-      node {
-        slug
-        id
-      }
-    }
-  }
-}`;
-
-export const posts_by_slug = gql`
-query ($slugUrl: String!) {
-	postBy(slug: $slugUrl) {
-		id
-		title
-		content
-	}
-}`;

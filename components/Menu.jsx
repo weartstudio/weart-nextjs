@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Container, Navbar, Nav, Button } from "react-bootstrap"
+import { Container, Navbar, Nav } from "react-bootstrap"
+import { menu } from "../helpers/texts-hu"
 
 export default function Menu() {
 	return (
@@ -9,9 +9,9 @@ export default function Menu() {
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="/#about">Rólam</Nav.Link>
-            <Nav.Link href="/portfolio">Portfolió</Nav.Link>
-            <Nav.Link href="/contact">Kapcsolat</Nav.Link>
+						{ menu.items.map(
+							(item,i) => ( <Nav.Link key={i} href={item.url}>{item.title}</Nav.Link> )
+						)}
             <Nav.Link href="https://github.com/weartstudio">
 							<i className="fa-brands fa-github"></i>
 							<span className="d-lg-none ms-lg-0 ms-2">Github</span>

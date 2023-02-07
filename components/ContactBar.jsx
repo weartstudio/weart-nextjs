@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
+import { footer } from '../helpers/texts-hu'
 
 function ContactBar() {
 	return (
@@ -7,9 +8,9 @@ function ContactBar() {
 			<Container className='text-center text-white py-5 py-lg-8'>
 				<Row className='justify-content-center'>
 					<Col lg={8} >
-						<h3 className="display-4">Van egy projekt ötleted? <span className='colored'>Dolgozzunk együtt</span> rajta!</h3>
-						<p className='text-muted my-4'>{`I'm David Louis— a designer who works with startups looking to push creative boundaries`}</p>
-						<Button variant='colored' href='/contact'>Beszélgessünk</Button>
+						<h3 className="display-4">{ footer.contact.title }</h3>
+						<p className='text-muted my-4'>{ footer.contact.desc }</p>
+						<Button variant='colored' href='/contact'>{ footer.contact.btn }</Button>
 					</Col>
 				</Row>
 			</Container>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import PortfolioItem from '../PortfolioItem'
-
+import {home} from '../../helpers/texts-hu'
 
 function Portfolio({data}) {
 
@@ -11,8 +11,8 @@ function Portfolio({data}) {
 				<Col>
 					<Row xs={1} className='g-5'>
 						<Col>
-							<h2 className="display-5 mt-0" dangerouslySetInnerHTML={{__html: data?.homeportfoliotitle}}></h2>
-							<p className='text-meta'>{data?.homeportfoliotext}</p>
+							<h2 className="display-5 mt-0">{ home.portfolio.title }</h2>
+							<p className='text-meta'>{ home.portfolio.desc }</p>
 						</Col>
 						{data?.homeportfoliofeatured.map((item, i)=>{
 							if(i<=1) return <PortfolioItem key={i} data={item} />

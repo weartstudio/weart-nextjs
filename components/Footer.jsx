@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Container, Button, Row, Col, Nav } from 'react-bootstrap'
-import { useRouter } from 'next/router'
+import { Container, Nav } from 'react-bootstrap'
+import { menu, footer } from "../helpers/texts-hu"
 
 function Footer() {
 	const [thisYear] = useState(new Date().getFullYear())
@@ -10,10 +10,10 @@ function Footer() {
 			{/* copyright bar */}
 			<Container className='text-muted small py-4 text-center d-flex flex-column align-items-center'>
 
-				<Nav className='mx-auto justify-content-center mb-4'>
-					<Nav.Link href="/about">Rólam</Nav.Link>
-					<Nav.Link href="/portfolio">Portfolió</Nav.Link>
-					<Nav.Link href="/contact">Kapcsolat</Nav.Link>
+				<Nav className='mx-auto justify-content-center mb-0'>
+					{ menu.items.map(
+						(item,i) => ( <Nav.Link key={i} href={item.url}>{item.title}</Nav.Link> )
+					)}
 					<Nav.Link href="https://github.com/weartstudio">
 						<i className="fa-brands fa-github"></i>
 						<span className="ms-2">Github</span>
@@ -24,12 +24,7 @@ function Footer() {
 					</Nav.Link>
 				</Nav>
 
-				<p className='m-0'>Minden jog fenntartva &copy; 2019 - {thisYear}</p>
-
-				<Nav className='mx-auto justify-content-center'>
-					<Nav.Link href="/about">Adatvédelem</Nav.Link>
-					<Nav.Link href="/portfolio">Impresszum</Nav.Link>
-				</Nav>
+				<p className='m-0'>{ footer.copyright } &copy; 2019 - {thisYear}</p>
 
 			</Container>
 		</div>
