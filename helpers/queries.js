@@ -22,6 +22,7 @@ export const homePageQuery = gql`query {
           portfolio {
             portfoliotag
             portfoliotechstack
+            portfoliourl
           }
           title
           featuredImage {
@@ -63,6 +64,7 @@ export const portfolioPageQuery = gql`query {
       portfolio {
         portfoliotechstack
         portfoliotag
+        portfoliourl
       }
     }
   }

@@ -19,7 +19,7 @@ function PortfolioItem({data, extraclass}) {
 							<p className='mt-1'>{data?.portfolio.portfoliotag}</p>
 						</Col>
 					</Row>
-					<Card.Link href={data?.url}>Bővebben</Card.Link>
+					<Card.Link href={data?.portfolio.portfoliourl}>Megnézem</Card.Link>
 				</Card.Body>
 			</Card>
 		</Col>
