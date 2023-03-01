@@ -12,10 +12,12 @@ export const homePageQuery = gql`query {
   }
   page(id: "12", idType: DATABASE_ID) {
     homeAbout {
-      aboutleft
-      aboutright
+      homeabouttitle
+      homeaboutcontent
     }
     homePortfolio {
+      homeportfoliotitle
+      homeportfoliocontent
       homeportfoliofeatured {
         ... on Project {
           id
@@ -52,6 +54,7 @@ export const portfolioPageQuery = gql`query {
   page(id: "58", idType: DATABASE_ID) {
     content
     title
+    excerpt
   }
   projects {
     nodes {
@@ -69,3 +72,12 @@ export const portfolioPageQuery = gql`query {
     }
   }
 }`
+
+export const aboutPageQuery = gql`query {
+  page(id: "1478", idType: DATABASE_ID) {
+    content
+    title
+    excerpt
+  }
+}`
+

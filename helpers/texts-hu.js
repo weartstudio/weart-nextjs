@@ -36,8 +36,7 @@ export const home = {
 		]
 	},
 	portfolio: {
-		title: `Kiemelt referenciák`,
-		desc: `Az elmúlt években dolgoztam mindenféle méretű vállakozással, legyen szó ügynökségről vagy saját terméket fejlesztő nagyvállalattal. Sajnos ezek egy jó részét nem mutathatom be publikusan.`
+		link: 'Még több projekt'
 	},
 	about: {
 		numbers: [
@@ -54,7 +53,6 @@ export const home = {
 				num: '20+'
 			}
 		],
-		title: 'Rólam',
 		more: 'Bővebben rólam',
 	}
 }
@@ -66,8 +64,6 @@ export const footer = {
 		btn: `Beszélgessünk`,
 	},
 	copyright: `Minden jog fenntartva`,
-	legal1: `Adatvédelem`,
-	legal2: `Impresszum`,
 }
 
 export const menu = {

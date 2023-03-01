@@ -1,29 +1,24 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { aboutPageQuery } from '../helpers/queries'
+import { ApolloClient,InMemoryCache } from '@apollo/client'
 
-function about() {
+function about({data}) {
 	return (
 		<>
 			<div className="bg-dark py-5 text-white text-center">
 				<Container>
 					<Row className='justify-content-center'>
 						<Col lg="8" md="10">
-							<h1 className="display-5">
-								About <span className="colored">me</span>
-							</h1>
-							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus cupiditate voluptas sunt hic laborum aperiam, ea corporis? Cum quia voluptas consectetur, amet nemo soluta deleniti suscipit nulla, rerum corrupti velit!</p>
+							<h1 className="display-5">{data.page.title}</h1>
+							<div dangerouslySetInnerHTML={{__html: data.page.excerpt}}></div>
 						</Col>
 					</Row>
 				</Container>
 			</div>
 			<Container>
 				<Row className='justify-content-center my-5'>
-					<Col lg={8} sm={12}>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ad, odit cupiditate doloremque labore debitis cum saepe molestias beatae, veritatis mollitia eius fuga a odio quo nihil obcaecati ipsa ipsum?</p>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ad, odit cupiditate doloremque labore debitis cum saepe molestias beatae, veritatis mollitia eius fuga a odio quo nihil obcaecati ipsa ipsum?</p>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ad, odit cupiditate doloremque labore debitis cum saepe molestias beatae, veritatis mollitia eius fuga a odio quo nihil obcaecati ipsa ipsum?</p>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ad, odit cupiditate doloremque labore debitis cum saepe molestias beatae, veritatis mollitia eius fuga a odio quo nihil obcaecati ipsa ipsum?</p>
-					</Col>
+					<Col lg={8} sm={12} dangerouslySetInnerHTML={{__html: data.page.content}}></Col>
 				</Row>
 			</Container>
 		</>
@@ -31,3 +26,21 @@ function about() {
 }
 
 export default about
+
+export async function getStaticProps(){
+
+  const client = new ApolloClient({
+    uri: process.env.WP,
+    cache: new InMemoryCache()
+  });
+
+  const {data} = await client.query({
+    query: aboutPageQuery
+  })
+
+  return {
+    props: {
+      data: data
+    }
+  }
+}

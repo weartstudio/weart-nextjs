@@ -5,6 +5,7 @@ import Menu from '../components/Menu'
 import Testimonials from '../components/home/Testimonials'
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { testimonialQuery } from '../helpers/queries'
+import { footer } from '../helpers/texts-hu'
 
 function contact({data}) {
 	return (
@@ -12,7 +13,7 @@ function contact({data}) {
 			<Container>
 				<Row lg={2} xs={1} className="py-5 pt-lg-7 pb-5 g-5">
 					<Col>
-						<h1 class="display-5">Van egy projekt ötleted? <span class="colored">Dolgozzunk együtt</span> rajta!</h1>
+						<h1 class="display-5">{footer.contact.title}</h1>
 						<p className='h3 mt-5'><i className="fa-solid fa-envelope text-primary me-3"></i>balazs@weart.hu</p>
 					</Col>
 					<Col>

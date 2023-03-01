@@ -11,8 +11,8 @@ function Portfolio({data}) {
 				<Col>
 					<Row xs={1} className='g-5'>
 						<Col>
-							<h2 className="display-5 mt-0">{ home.portfolio.title }</h2>
-							<p className='text-meta'>{ home.portfolio.desc }</p>
+							<h2 className="display-5 mt-0">{ data?.homeportfoliotitle }</h2>
+							<p className='text-meta'>{ data?.homeportfoliocontent }</p>
 						</Col>
 						{data?.homeportfoliofeatured.map((item, i)=>{
 							if(i<=1) return <PortfolioItem key={i} data={item} />
@@ -25,7 +25,7 @@ function Portfolio({data}) {
 							if(i>=2 && i<=3) return <PortfolioItem key={i} data={item} />
 						})}
 						<Col className='d-flex justify-content-center'>
-							<Button href='/portfolio' variant='colored'>Még több projekt</Button>
+							<Button href='/portfolio' variant='colored'>{home.portfolio.link}</Button>
 						</Col>
 					</Row>
 				</Col>

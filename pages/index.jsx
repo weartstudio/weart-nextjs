@@ -20,7 +20,7 @@ export default function Home({data}) {
       <Services />
       <Portfolio data={data?.page.homePortfolio} />
       <Testimonials data={data?.acfOptionsGlobalOptions.testimonial} />
-      <About />
+      <About data={data?.page.homeAbout} />
     </>
   )
 }
