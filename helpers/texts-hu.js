@@ -15,29 +15,29 @@ export const home = {
 	],
 	services: {
 		title: `Miben tudok segíteni?`,
-		desc: `If you are looking for someone who will help you to build your digital web presence than congratulations!`,
+		desc: `Ha keresel valakit aki segít felépíteni a webes projektjeid kliens oldali megjelenését, akkor jó helyen jársz!`,
 		items: [
 			{
 				icon: `/img/home/code-icon.svg`,
 				title: `Design to Code`,
-				desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo reprehenderit, doloribus modi accusamus debitis`,
+				desc: `A kapott design terv alapján felépítem a sitebuild-et, akár a vállalati konvencióknak megfelelő toolokkal.`,
 			},
 			{
 				icon: `/img/home/react-icon.png`,
 				title: `JS & React`,
-				desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo reprehenderit, doloribus modi accusamus debitis`,
+				desc: `API / GraphQL adatelérések alapján készítek ReactJS / NextJS webappokat akár WP-vel kombinálva.`,
 			},
 			{
 				icon: `/img/home/wordpress-icon.png`,
 				title: `WordPress`,
-				desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo reprehenderit, doloribus modi accusamus debitis`,
+				desc: `Legyen szó akár MVC szerű vagy Headless használatról, tudok segíteni, ez az oldal is részben így épült fel.`,
 			},
 
 		]
 	},
 	portfolio: {
 		title: `Kiemelt referenciák`,
-		desc: `Over the years, I've partnered with startups of all sizes and various stages to create some truly unique products. Here are a few that I feel were the most challenging yet rewarding.`
+		desc: `Az elmúlt években dolgoztam mindenféle méretű vállakozással, legyen szó ügynökségről vagy saját terméket fejlesztő nagyvállalattal. Sajnos ezek egy jó részét nem mutathatom be publikusan.`
 	},
 	about: {
 		numbers: [
@@ -54,18 +54,15 @@ export const home = {
 				num: '20+'
 			}
 		],
-		name: 'Egyed Balázs',
-		logotext: 'Akikkek már együtt dolgoztam.',
-		logos: [
-			'/img/home/opten.svg'
-		]
+		title: 'Rólam',
+		more: 'Bővebben rólam',
 	}
 }
 
 export const footer = {
 	contact: {
 		title: `Van egy projekt ötleted? Dolgozzunk együtt rajta!`,
-		desc: `I'm David Louis— a designer who works with startups looking to push creative boundaries`,
+		desc: `Egyed Balázs vagyok — egy szabadúszó frontend programozó, aki segít kitolni a web határait`,
 		btn: `Beszélgessünk`,
 	},
 	copyright: `Minden jog fenntartva`,

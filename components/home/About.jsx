@@ -10,8 +10,7 @@ function About({data}) {
 					<Row className='g-5'>
 
 						<Col lg={3} sm={12}>
-							{/* <h2 className='text-uppercase display-5 lh-1'>{ home.about.name }</h2> */}
-							<h2 className='h1 fw-bold'>Rólam</h2>
+							<h2 className='h1 fw-bold'>{ home.about.title }</h2>
 						</Col>
 
 						<Col lg={6}>
@@ -35,7 +34,7 @@ function About({data}) {
 						<Col lg={3} className="text-end">
 							<Image src="/img/avatar.jpeg" className='img-fluid' width={400} height={400} alt="Me" />
 							<div className="text-end mt-4">
-								<Link href="/about" className='text-primary fw-bold text-decoration-none'>Bővebben rólam <i className='fas fa-arrow-right'></i></Link>
+								<Link href="/about" className='text-primary fw-bold text-decoration-none'>{ home.about.more } <i className='fas fa-arrow-right'></i></Link>
 							</div>
 						</Col>
 					</Row>
