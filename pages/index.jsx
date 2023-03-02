@@ -11,9 +11,6 @@ import About from '../components/home/About'
 export default function Home({data}) {
   return (
     <>
-      <Head>
-        <title>Weart.hu - Egyed Balázs, JS, React és WordPress fejlesztő</title>
-      </Head>
       <Hero data={data?.page.homeHero} />
       <Logo />
       <Services  data={data?.page.homeServices} />
