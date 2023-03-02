@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weart.hu - Egyed Balázs, JS, React és WordPress fejlesztő</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />
