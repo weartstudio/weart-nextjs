@@ -60,7 +60,7 @@ export const home = {
 export const footer = {
 	contact: {
 		title: `Van egy projekt ötleted? Dolgozzunk együtt rajta!`,
-		desc: `Egyed Balázs vagyok — egy szabadúszó frontend programozó, aki segít kitolni a web határait`,
+		desc: `Egyed Balázs vagyok — szabadúszó frontend fejlesztő, aki segít kitolni a web határait`,
 		btn: `Beszélgessünk`,
 	},
 	copyright: `Minden jog fenntartva`,
