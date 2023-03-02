@@ -15,6 +15,21 @@ export const homePageQuery = gql`query {
       homeabouttitle
       homeaboutcontent
     }
+    homeHero {
+      herocontent
+      homeherotitle
+    }
+    homeServices {
+      servicetitle
+      servicecontent
+      services {
+        title
+        content
+        icon {
+          mediaItemUrl
+        }
+      }
+    }
     homePortfolio {
       homeportfoliotitle
       homeportfoliocontent

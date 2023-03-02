@@ -3,3 +3,28 @@
 		@extend .img-fluid;
 	}
 }
+
+
+@include media-breakpoint-up(xl){
+	.alignwide{
+		margin-left: -10%;
+		margin-right: -10%;
+	}
+}
+.wp-block-media-text{
+	margin-top: 5%;
+	text-align: center;
+	@include media-breakpoint-up(lg){
+		text-align: left;
+		display: grid;
+	}
+	.wp-block-media-text__media{
+		margin: 0;
+		img{
+			@extend .img-fluid;
+		}
+	}
+	.wp-block-media-text__content{
+		padding: 20px 30px;
+	}
+}
